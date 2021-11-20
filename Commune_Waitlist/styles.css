@@ -24,7 +24,12 @@ main {
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 3rem 1rem;
+}
+
+nav ul {
+  display: none;
 }
 
 .content-wrapper {
@@ -108,6 +113,10 @@ form button {
   margin: 1rem 0;
 }
 
+.hero-img {
+  display: none;
+}
+
 h5 {
   color: rgb(55,39,100);
   align-self: flex-start;
@@ -127,10 +136,6 @@ h5 {
 
 /* TABLET VIEW */
 @media screen and (min-width: 768px) {
-
-  main {
-    padding: 1rem;
-  }
 
   nav {
     margin: 3rem 5rem;
@@ -177,6 +182,83 @@ h5 {
 
   .company-icons {
     align-self: flex-start;
+  }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+  main {
+    padding: 0.5rem 3rem;
+  }
+
+  .hamburger { 
+    display: none;
+  }
+
+
+  nav ul {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    list-style: none;
+  }
+
+  nav li {
+    text-align: center;
+  }
+
+  nav li a {
+    text-decoration: none;
+    display: block;
+    padding: 1rem;
+    color: rgb(55,39,100);
+    font-size: 1.2rem;
+  }
+
+  nav button {
+    border-radius: 0.5rem;
+    background: rgb(55,39,100);
+    color: rgb(245,248,253);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1rem 1.5rem;
+  }
+
+  .flex-wrapper {
+    display: flex;
+  }
+
+  .content-wrapper {
+    width: 70%;
+  }
+
+  .content-wrapper * {
+    margin-left: 0;
+  }
+
+  .early-access {
+    align-self: flex-start;
+  }
+
+  .hero-text {
+    text-align: left;
+  }
+
+  .content-wrapper article {
+    text-align: left;
+  }
+
+  h5 {
+    margin-top: 6rem;
+  }
+
+  .hero-img {
+    display: block;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    width: 30%;
+    height: 30%;
   }
 
 }
